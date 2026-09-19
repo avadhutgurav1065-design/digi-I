@@ -355,28 +355,12 @@ body {
 .digilocker-badge {
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
-    padding: 8px 14px;
-    border-radius: 28px;
 }
 
-.digi-text-badge {
-    display: flex;
-    flex-direction: column;
-}
-
-.powered-by {
-    font-size: 9px;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-.digi-name {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--primary-dark);
-    letter-spacing: 0.3px;
+.digilocker-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .qr-section {
