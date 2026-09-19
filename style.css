@@ -253,48 +253,16 @@ body {
 .card-header {
     display: flex;
     align-items: center;
-    padding: 14px 16px 10px;
-    gap: 8px;
+    justify-content: center;
+    padding: 0;
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, #FF9933, #FFFFFF, #138808) 1;
 }
 
-.emblem-section {
-    flex-shrink: 0;
-}
-
-.emblem-img {
-    width: 44px;
-    height: 44px;
+.govt-banner-img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
-    border-radius: 4px;
-}
-
-.header-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bharat {
-    font-family: 'Noto Sans Devanagari', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--accent-red);
-    line-height: 1.2;
-}
-
-.govt {
-    font-size: 9px;
-    font-weight: 700;
-    color: var(--accent-red);
-    letter-spacing: 0.5px;
-    line-height: 1.2;
-}
-
-.aadhaar-logo {
-    flex-shrink: 0;
 }
 
 /* Person Section */
