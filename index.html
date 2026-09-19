@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DigiLocker - Aadhaar Card</title>
+    <meta name="description" content="DigiLocker - Your digital document wallet. View your Aadhaar Card and other documents securely.">
+    <!-- iOS PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="DigiLocker">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">12:15</span>
+            <div class="status-icons">
+                <svg class="signal-icon" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                    <rect x="0" y="9" width="3" height="3" rx="0.5" fill="white"/>
+                    <rect x="4" y="6" width="3" height="6" rx="0.5" fill="white"/>
+                    <rect x="8" y="3" width="3" height="9" rx="0.5" fill="white"/>
+                    <rect x="12" y="0" width="3" height="12" rx="0.5" fill="white"/>
+                </svg>
+                <span class="network-type">5G</span>
+                <div class="battery-icon">
+                    <div class="battery-level" style="width: 75%"></div>
+                    <span class="battery-text">75</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Navigation Bar -->
+        <div class="nav-bar">
+            <button class="back-btn" id="backBtn" aria-label="Go back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="nav-title">Aadhaar Card</h1>
+            <button class="profile-btn" id="profileBtn" aria-label="View profile">
+                <img src="assets/profile.png" alt="Rutuja" class="profile-avatar" id="profileAvatar">
+            </button>
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="content-area">
+            <!-- Aadhaar Card -->
+            <div class="aadhaar-card">
+                <!-- Header with Emblem and Logo -->
+                <div class="card-header">
+                    <div class="emblem-section">
+                        <img src="assets/govt_banner.jpg" alt="Government of India Emblem" class="emblem-img">
+                    </div>
+                    <div class="header-text">
+                        <span class="bharat">भारत सरकार</span>
+                        <span class="govt">GOVERNMENT OF INDIA</span>
+                    </div>
+                    <div class="aadhaar-logo">
+                        <svg width="60" height="28" viewBox="0 0 120 56">
+                            <rect width="120" height="56" rx="4" fill="#E8513F"/>
+                            <text x="60" y="22" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="Inter">AADHAAR</text>
+                            <circle cx="40" cy="38" r="6" fill="none" stroke="white" stroke-width="1.5"/>
+                            <circle cx="60" cy="38" r="6" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+                            <circle cx="80" cy="38" r="6" fill="none" stroke="#2E7D32" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Person Details -->
+                <div class="person-section">
+                    <div class="person-photo-wrapper">
+                        <img src="assets/profile.png" alt="Rutuja Panjabrao Thite" class="person-photo">
+                    </div>
+                    <div class="person-details">
+                        <h2 class="person-name">Rutuja Panjabrao Thite</h2>
+                        <p class="person-dob">28/02/2003</p>
+                        <p class="person-gender">FEMALE</p>
+                        <p class="aadhaar-number">xxxxxxxx4586</p>
+                    </div>
+                </div>
+
+                <!-- Address Section -->
+                <div class="address-section">
+                    <h3 class="address-label">Address</h3>
+                    <p class="address-text">antule nagar, Balsond, Hingoli, Hingoli, Maharashtra, 431513</p>
+                </div>
+
+                <!-- DigiLocker & QR Section -->
+                <div class="digilocker-section">
+                    <div class="digilocker-badge">
+                        <div class="digi-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50">
+                                <circle cx="25" cy="25" r="24" fill="none" stroke="#5C4FD6" stroke-width="2.5"/>
+                                <path d="M18 22c0-3.9 3.1-7 7-7s7 3.1 7 7" fill="none" stroke="#5C4FD6" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="16" y="22" width="18" height="14" rx="3" fill="#5C4FD6"/>
+                                <circle cx="25" cy="28" r="2.5" fill="white"/>
+                                <line x1="25" y1="30" x2="25" y2="33" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                <!-- Cloud shape on top -->
+                                <ellipse cx="25" cy="15" rx="5" ry="3" fill="#5C4FD6" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <div class="digi-text-badge">
+                            <span class="powered-by">Powered by</span>
+                            <span class="digi-name">DigiLocker</span>
+                        </div>
+                    </div>
+                    <div class="qr-section">
+                        <!-- QR Code SVG -->
+                        <svg class="qr-code" width="70" height="70" viewBox="0 0 70 70">
+                            <rect width="70" height="70" fill="white"/>
+                            <!-- QR corner patterns -->
+                            <rect x="5" y="5" width="18" height="18" fill="black"/>
+                            <rect x="7" y="7" width="14" height="14" fill="white"/>
+                            <rect x="9" y="9" width="10" height="10" fill="black"/>
+                            
+                            <rect x="47" y="5" width="18" height="18" fill="black"/>
+                            <rect x="49" y="7" width="14" height="14" fill="white"/>
+                            <rect x="51" y="9" width="10" height="10" fill="black"/>
+                            
+                            <rect x="5" y="47" width="18" height="18" fill="black"/>
+                            <rect x="7" y="49" width="14" height="14" fill="white"/>
+                            <rect x="9" y="51" width="10" height="10" fill="black"/>
+                            
+                            <!-- QR data dots -->
+                            <rect x="26" y="5" width="3" height="3" fill="black"/>
+                            <rect x="32" y="5" width="3" height="3" fill="black"/>
+                            <rect x="38" y="5" width="3" height="3" fill="black"/>
+                            <rect x="26" y="11" width="3" height="3" fill="black"/>
+                            <rect x="35" y="11" width="3" height="3" fill="black"/>
+                            <rect x="41" y="11" width="3" height="3" fill="black"/>
+                            <rect x="29" y="17" width="3" height="3" fill="black"/>
+                            <rect x="38" y="17" width="3" height="3" fill="black"/>
+                            
+                            <rect x="5" y="26" width="3" height="3" fill="black"/>
+                            <rect x="11" y="26" width="3" height="3" fill="black"/>
+                            <rect x="17" y="26" width="3" height="3" fill="black"/>
+                            <rect x="26" y="26" width="3" height="3" fill="black"/>
+                            <rect x="32" y="26" width="3" height="3" fill="black"/>
+                            <rect x="38" y="29" width="3" height="3" fill="black"/>
+                            <rect x="44" y="26" width="3" height="3" fill="black"/>
+                            <rect x="50" y="26" width="3" height="3" fill="black"/>
+                            <rect x="56" y="26" width="3" height="3" fill="black"/>
+                            <rect x="62" y="26" width="3" height="3" fill="black"/>
+                            
+                            <rect x="5" y="32" width="3" height="3" fill="black"/>
+                            <rect x="14" y="32" width="3" height="3" fill="black"/>
+                            <rect x="20" y="32" width="3" height="3" fill="black"/>
+                            <rect x="29" y="32" width="3" height="3" fill="black"/>
+                            <rect x="35" y="35" width="3" height="3" fill="black"/>
+                            <rect x="47" y="32" width="3" height="3" fill="black"/>
+                            <rect x="53" y="32" width="3" height="3" fill="black"/>
+                            <rect x="62" y="32" width="3" height="3" fill="black"/>
+                            
+                            <rect x="8" y="38" width="3" height="3" fill="black"/>
+                            <rect x="17" y="38" width="3" height="3" fill="black"/>
+                            <rect x="26" y="38" width="3" height="3" fill="black"/>
+                            <rect x="32" y="41" width="3" height="3" fill="black"/>
+                            <rect x="41" y="38" width="3" height="3" fill="black"/>
+                            <rect x="50" y="38" width="3" height="3" fill="black"/>
+                            <rect x="59" y="38" width="3" height="3" fill="black"/>
+                            
+                            <rect x="26" y="47" width="3" height="3" fill="black"/>
+                            <rect x="35" y="47" width="3" height="3" fill="black"/>
+                            <rect x="41" y="47" width="3" height="3" fill="black"/>
+                            <rect x="50" y="47" width="3" height="3" fill="black"/>
+                            <rect x="59" y="47" width="3" height="3" fill="black"/>
+                            
+                            <rect x="29" y="53" width="3" height="3" fill="black"/>
+                            <rect x="38" y="53" width="3" height="3" fill="black"/>
+                            <rect x="47" y="53" width="3" height="3" fill="black"/>
+                            <rect x="56" y="53" width="3" height="3" fill="black"/>
+                            <rect x="62" y="53" width="3" height="3" fill="black"/>
+                            
+                            <rect x="26" y="59" width="3" height="3" fill="black"/>
+                            <rect x="32" y="62" width="3" height="3" fill="black"/>
+                            <rect x="44" y="59" width="3" height="3" fill="black"/>
+                            <rect x="53" y="59" width="3" height="3" fill="black"/>
+                            <rect x="62" y="59" width="3" height="3" fill="black"/>
+                            
+                            <rect x="47" y="47" width="12" height="12" fill="black"/>
+                            <rect x="49" y="49" width="8" height="8" fill="white"/>
+                            <rect x="51" y="51" width="4" height="4" fill="black"/>
+                        </svg>
+                        <span class="qr-text">Tap to Zoom</span>
+                    </div>
+                </div>
+
+                <!-- Tagline -->
+                <div class="tagline-section">
+                    <p class="tagline">मेरा <span class="tagline-red">आधार,</span> मेरी पहचान</p>
+                </div>
+            </div>
+
+            <!-- Did You Know Section -->
+            <div class="info-section">
+                <p class="info-label">Did you know?</p>
+                <p class="info-text">Indian Railways and Airports accept Digital Aadhaar through DigiLocker as valid identity proof.</p>
+            </div>
+
+            <!-- Share Section -->
+            <div class="share-section">
+                <a href="#" class="share-link">Tell your friends and family about DigiLocker</a>
+                <button class="share-icon-btn" aria-label="Share">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="18" cy="5" r="3" stroke="#6C63FF" stroke-width="2"/>
+                        <circle cx="6" cy="12" r="3" stroke="#6C63FF" stroke-width="2"/>
+                        <circle cx="18" cy="19" r="3" stroke="#6C63FF" stroke-width="2"/>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="#6C63FF" stroke-width="2"/>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="#6C63FF" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="bottom-nav-item active" aria-label="Documents">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="bottom-nav-item" aria-label="Share">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="2"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            <button class="bottom-nav-item" aria-label="Scanner">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Profile Modal Overlay -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="profile-modal" id="profileModal">
+                <button class="modal-close-btn" id="closeModalBtn" aria-label="Close profile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="11" fill="rgba(150,150,150,0.4)" stroke="none"/>
+                        <path d="M8 8L16 16M16 8L8 16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="modal-photo-ring">
+                    <img src="assets/profile.png" alt="Rutuja Panjabrao Thite" class="modal-photo">
+                </div>
+                <h2 class="modal-name">Rutuja Panjabrao Thite</h2>
+                <p class="modal-info">DOB : <span class="modal-info-bold">28-02-2003</span> &nbsp;| Gender : Female</p>
+                <div class="modal-digi-badge">
+                    <div class="digi-icon-small">
+                        <svg width="32" height="32" viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="24" fill="none" stroke="#5C4FD6" stroke-width="2.5"/>
+                            <path d="M18 22c0-3.9 3.1-7 7-7s7 3.1 7 7" fill="none" stroke="#5C4FD6" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="16" y="22" width="18" height="14" rx="3" fill="#5C4FD6"/>
+                            <circle cx="25" cy="28" r="2.5" fill="white"/>
+                            <line x1="25" y1="30" x2="25" y2="33" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="digi-text-small">
+                        <span class="powered-by-sm">Powered by</span>
+                        <span class="digi-name-sm">DigiLocker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
